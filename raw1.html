@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Raw1</title>
+</head>
+<body>
+
+<div class="root">
+
+</div>
+
+<script type="text/javascript">
+    const root = document.querySelector(".root");
+    let res = 1;
+    for (let i = 1; i <= 1000; i++) {
+        res = 123123 * 12 / 12 * 34 / 34;
+    }
+    root.innerText = fib(1000);
+    // root.innerText = fib(res);
+
+    let htmlDoc = "<ul class=\"wikipedia-languages-langs hlist hlist-separated inline\">\n" +
+        "    <li><a class=\"external text\" href=\"https://ast.wikipedia.org/wiki/\"><span class=\"autonym\" title=\"Asturian (ast:)\" lang=\"ast\">Asturianu</span></a></li>\n" +
+        "    <li><a class=\"external text\" href=\"https://bn.wikipedia.org/wiki/\"><span class=\"autonym\" title=\"Bangla (bn:)\" lang=\"bn\">বাংলা</span></a></li>\n" +
+        "    <li><a class=\"external text\" href=\"https://bs.wikipedia.org/wiki/\"><span class=\"autonym\" title=\"Bosnian (bs:)\" lang=\"bs\">Bosanski</span></a></li>\n" +
+        "    <li><a class=\"external text\" href=\"https://et.wikipedia.org/wiki/\"><span class=\"autonym\" title=\"Estonian (et:)\" lang=\"et\">Eesti</span></a></li>\n" +
+        "    <li><a class=\"external text\" href=\"https://el.wikipedia.org/wiki/\"><span class=\"autonym\" title=\"Greek (el:)\" lang=\"el\">Ελληνικά</span></a></li>\n" +
+        "    <li><a class=\"external text\" href=\"https://simple.wikipedia.org/wiki/\"><span class=\"autonym\" title=\"Simple English (simple:)\" lang=\"simple\">Simple English</span></a></li>\n" +
+        "    <li><a class=\"external text\" href=\"https://ga.wikipedia.org/wiki/\"><span class=\"autonym\" title=\"Irish (ga:)\" lang=\"ga\">Gaeilge</span></a></li>\n" +
+        "    <li><a class=\"external text\" href=\"https://gl.wikipedia.org/wiki/\"><span class=\"autonym\" title=\"Galician (gl:)\" lang=\"gl\">Galego</span></a></li>\n" +
+        "    <li><a class=\"external text\" href=\"https://hr.wikipedia.org/wiki/\"><span class=\"autonym\" title=\"Croatian (hr:)\" lang=\"hr\">Hrvatski</span></a></li>\n" +
+        "    <li><a class=\"external text\" href=\"https://lv.wikipedia.org/wiki/\"><span class=\"autonym\" title=\"Latvian (lv:)\" lang=\"lv\">Latviešu</span></a></li>\n" +
+        "    <li><a class=\"external text\" href=\"https://lt.wikipedia.org/wiki/\"><span class=\"autonym\" title=\"Lithuanian (lt:)\" lang=\"lt\">Lietuvių</span></a></li>\n" +
+        "    <li><a class=\"external text\" href=\"https://ml.wikipedia.org/wiki/\"><span class=\"autonym\" title=\"Malayalam (ml:)\" lang=\"ml\">മലയാളം</span></a></li>\n" +
+        "    <li><a class=\"external text\" href=\"https://mk.wikipedia.org/wiki/\"><span class=\"autonym\" title=\"Macedonian (mk:)\" lang=\"mk\">Македонски</span></a></li>\n" +
+        "    <li><a class=\"external text\" href=\"https://nn.wikipedia.org/wiki/\"><span class=\"autonym\" title=\"Norwegian Nynorsk (nn:)\" lang=\"nn\">Norsk nynorsk</span></a></li>\n" +
+        "    <li><a class=\"external text\" href=\"https://sq.wikipedia.org/wiki/\"><span class=\"autonym\" title=\"Albanian (sq:)\" lang=\"sq\">Shqip</span></a></li>\n" +
+        "    <li><a class=\"external text\" href=\"https://sk.wikipedia.org/wiki/\"><span class=\"autonym\" title=\"Slovak (sk:)\" lang=\"sk\">Slovenčina</span></a></li>\n" +
+        "    <li><a class=\"external text\" href=\"https://sl.wikipedia.org/wiki/\"><span class=\"autonym\" title=\"Slovenian (sl:)\" lang=\"sl\">Slovenščina</span></a></li>\n" +
+        "    <li><a class=\"external text\" href=\"https://th.wikipedia.org/wiki/\"><span class=\"autonym\" title=\"Thai (th:)\" lang=\"th\">ไทย</span></a></li>\n" +
+        "  </ul>"
+
+    function isPrime(x) {
+        if (x < 2) {
+            return false;
+        }
+
+        for (let i = 2; i < x; i++) {
+            if (x % i === 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    function fib(n) {
+        let a = 0,
+            b = 1;
+        if (n > 0) {
+            while (--n) {
+                let t = a + b;
+                a = b;
+                b = t;
+            }
+            return b;
+        }
+        return a;
+    }
+</script>
+</body>
+</html>
